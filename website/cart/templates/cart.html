@@ -1,0 +1,44 @@
+{% extends 'main_app.html' %}
+
+{% block title %}Корзина{% endblock %}
+{% load cart_tag %}
+
+
+{% block content %}
+{% for key,value in request.session.cart.items %}
+<div class="container">
+    <table class="table" style="margin-top: 20px;">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Название</th>
+      <th scope="col">Количество</th>
+      <th scope="col">Цена</th>
+      <th scope="col">Общая цена</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><img src="{{ value.image }}" class="img-thumbnail-group" alt="Фото товара" style="width: 9rem;"></th>
+        <td>{{value.name}}</td>
+        <td>{{value.price}}</td>
+        <td>{{value.quantity}}</td>
+        <td>{{ value.price|multiply:value.quantity }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="container">
+  <a href="{% url 'cart:item_clear' value.product_id %}" class="btn btn-success">Удалить</a>
+</div>
+{% empty %}
+<div class="container">
+  <h2 style="text-align: center; margin-top: 30px;">Ваша корзина пуста!</h2>
+</div>
+{% endfor %}
+{% if request.session.cart.items|length > 0 %}
+<div class="container">
+  <a href="{% url 'cart:cart_clear' %}" class="btn btn-primary" style="margin-top: 20px;">Очистить корзину</a>
+</div>
+{% endif %}
+{% endblock %}

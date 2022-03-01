@@ -1,0 +1,12 @@
+{% extends 'main_app.html' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+<form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary" value="Регистрация">
+    <a href="{% url 'login' %}" class="btn btn-primary">Войти</a>
+</form>
+{% endblock %}

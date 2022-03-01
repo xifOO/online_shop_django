@@ -1,0 +1,19 @@
+{% extends 'main_app.html' %}
+
+{% block title %} {{ goalkeeper_form.name }} {% endblock %}
+
+{% block content %}
+<div class="container">
+   <div class="product_img_desc_container">
+      <div class="product_image_container" style="margin-top: 100px;">
+        <img src="{{ goalkeeper_form.img_url }}" class="img-thumbnail"  alt="product photo" style="width: 600px; height: 600px;">
+      </div>
+      <div class="product_desc">
+            <h4 class="product_name">{{ goalkeeper_form.name | linebreaks}}</h4>
+            <p>{{ goalkeeper_form.description | linebreaks}}</p>
+            <h3 class="product_price">{{ goalkeeper_form.price }} руб.</h3>
+            <a href="{% url 'cart:cart_add' goalkeeper_form.id %}" class="btn btn-primary btn-lg" style="margin-top: 35px;">Добавить в корзину</a>
+      </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,223 @@
+.header{
+	width: 100%;
+	background: #000000;
+	height: 40px;
+}
+
+.select {
+    padding-top: 8px;
+}
+
+.text_info {
+    font-size: 32px;
+    text-align: center;
+}
+
+
+.name_city {
+    font-size: 12px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#caret {
+    color: #fff;
+    padding-top: 2px;
+}
+
+#medical {
+    color: #fff;
+    padding-bottom: 2px;
+}
+
+
+.nav {
+    margin: 20px 0;
+    z-index: 101;
+}
+
+/* меню */
+.nav {
+	margin: 20px 0;
+	z-index: 101;
+	position: relative;
+	bottom: 45px;
+	float: right;
+}
+.nav ul {
+	margin: 0;
+	padding: 0;
+}
+.nav li {
+	margin: 0 45px 10px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	*display:inline;
+}
+
+.nav a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #fff;
+	line-height: 100%;
+}
+.nav a:hover {
+	color: #fff;
+}
+.nav .current a {
+	background: #c75b5b;
+	color: #fff;
+	border-radius: 3px;
+}
+
+
+.navig a {
+    padding: 0 45px 0 0;
+}
+
+.first_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+}
+
+.second_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+}
+
+.third_text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+}
+
+
+.body_nav {
+    width: 40%;
+    position: relative;
+    z-index: 32;
+    padding-top: 35px;
+}
+
+
+.men:hover {
+    border-bottom: 2px solid black;
+}
+
+.women:hover {
+    border-bottom: 2px solid black;
+}
+
+.child:hover {
+    border-bottom: 2px solid black;
+}
+
+
+.body_text{
+    position: relative;
+    width: 20%;
+    bottom: 55px;
+    color: #000;
+    padding-left: 47%;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+
+.body_text:hover {
+    color: #000;
+}
+
+.nav_user {
+    bottom: 25px;
+    left: 85.1%;
+    position: relative;
+}
+
+.nav_user a {
+    cursor: pointer;
+    padding: 0 14px 0 0;
+    text-decoration: none;
+    color: #888888;
+    transition: 0.9s linear;
+}
+
+.nav_user a:hover {
+    color: #000;
+}
+
+.body_nav a {
+    padding: 0 14px 0 0;
+    text-decoration: none;
+    color: #888888;
+    transition: .9s linear;
+}
+
+.body_nav a:hover {
+    color: #000;
+}
+
+
+.carta_img{
+    object-fit: cover;
+    width: 286px;
+    height: 180px;
+}
+
+.cont {
+    width: 960px;
+    height: 290px;
+    display: flex;
+    justify-content: start;
+}
+
+.menu {
+    float: left;
+}
+
+
+.menu_nav a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0 11px 0 0;
+    color: #000000;
+    transition: .9s linear;
+}
+
+.menu_nav a:hover{
+    color: #000000
+}
+
+#s:hover ~ .menu_href {color: #888888}
+#m:hover ~ .menu_href {color: #888888}
+#n:hover ~ .menu_href {color: #888888}
+#b:hover ~ .menu_href {color: #888888}
+#d:hover ~ .menu_href {color: #888888}
+#c:hover ~ .menu_href {color: #888888}
+#a:hover ~ .menu_href {color: #888888}
+
+
+#search_menu {
+    position: relative;
+    bottom: 21px;
+    left: 66.4%;
+}
+
+#glass {
+    position: relative;
+    bottom: 2px;
+}
+
+.product_desc {
+    padding-left: 650px;
+    position: relative;
+    bottom: 550px;
+}
+
+.cart_text {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+}

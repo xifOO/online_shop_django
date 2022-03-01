@@ -1,0 +1,10 @@
+{% extends 'main_app.html' %}
+
+{% block title %}Выйти{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h3 style="text-align: center;">Вы вышли из аккаунта!</h3>
+    <a href="{% url 'login' %}" class="btn btn-success">Войти</a>
+</div>
+{% endblock %}

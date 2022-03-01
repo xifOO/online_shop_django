@@ -1,0 +1,13 @@
+<div class="container">
+  <nav aria-label="Page navigation example" style="float: right; padding-right: 65px; padding-top: 25px;">
+    <ul class="pagination">
+      {% if page.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page={{ page.previous_page_number }}" style="margin-right: 10px;">Предыдущая</a></li>
+      {% endif %}
+        <span class="page-item" style="margin-top: 7px;">Страница {{ page.number }} из {{ page.paginator.num_pages }}</span>
+      {% if page.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{ page.next_page_number }}" style="margin-left: 10px;">Следующая</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+</div>

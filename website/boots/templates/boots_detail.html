@@ -1,0 +1,20 @@
+{% extends 'main_app.html' %}
+
+{% block title %} {{ product.name }} {% endblock %}
+
+{% block content %}
+<div class="container">
+   <div class="product_img_desc_container">
+      <div class="product_image_container" style="margin-top: 100px;">
+        <img src="{{ boots.img_url }}" class="img-thumbnail"  alt="product photo" style="width: 600px; height: 600px;">
+      </div>
+      <div class="product_desc">
+            <h4 class="product_name">{{ boots.name | linebreaks}}</h4>
+            <p>{{ boots.description | linebreaks}}</p>
+            <h3 class="product_price">{{ boots.price }} руб.</h3>
+            <a href="{% url 'cart:cart_add' boots.id %}" class="btn btn-primary" method="get">В корзину</a>
+          </form>
+      </div>
+    </div>
+</div>
+{% endblock %}

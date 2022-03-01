@@ -1,0 +1,14 @@
+{% extends 'main_app.html' %}
+
+{% block title %}Обратная связь{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 style="text-align: center;">Обратная связь</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit' class="btn btn-success" style="margin-left: 47%;">Отправить</button>
+    </form>
+</div>
+{% endblock %}

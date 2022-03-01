@@ -1,0 +1,25 @@
+{% extends 'main_app.html' %}
+
+{% block title %}Войти{% endblock %}
+
+{% block content %}
+{% if form.errors %}
+    <p>Ваш логин или пароль неверный. Пожалуйста, повторите попытку.</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Вы уже зарегистрированы на сайте.</p>
+    {% else %}
+    <p>Пожалуйста, зарегистрируйтесь на сайте.</p>
+    {% endif %}
+{% endif %}
+<div class="container">
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-primary" value="Войти">
+        <a href="{% url 'register' %}" class="btn btn-primary">Регистрация</a>
+    </form>
+</div>
+{% endblock %}

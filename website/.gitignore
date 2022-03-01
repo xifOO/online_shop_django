@@ -1,0 +1,4 @@
+.DS_Store
+temp.py
+db.sqlite3
+__pycache__

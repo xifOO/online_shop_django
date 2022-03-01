@@ -1,0 +1,22 @@
+{% extends 'main_app.html' %}
+
+{% block title %}Футбольная форма{% endblock title %}
+
+
+{% block content %}
+{% for order in orders %}
+<div class="conta" style="display: inline-block; padding-left: 60px;">
+    <div class="card-group" style="width: 23.4rem; padding-top: 10px;">
+        <img src="{{ order.img_url }}" class="card-img-top" alt="Card IMG">
+        <div class="card-body">
+            <h5 class="card-title">{{ order.name }}</h5>
+            <p class="card-text">{{ order.price }} ₽</p>
+            <a href="{% url 'boots:football_form_detail' order.slug %}" class="btn btn-primary">Подробнее</a>
+            <a href="{% url 'cart:cart_add' order.id %}" class="btn btn-primary" method="get">В корзину</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% include 'pagination.html' with page=orders %}
+{% endblock %}
+
