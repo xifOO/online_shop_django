@@ -33,7 +33,6 @@ class Cart(object):
             }
         else:
             newItem = True
-
             for key, value in self.cart.items():
                 if key == str(product.id):
 
@@ -41,8 +40,8 @@ class Cart(object):
                     newItem = False
                     self.save()
                     break
-            if newItem == True:
 
+            if newItem == True:
                 self.cart[product.id] = {
                     'userid': self.request,
                     'product_id': product.id,

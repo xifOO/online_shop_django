@@ -12,9 +12,9 @@
     <tr>
       <th scope="col"></th>
       <th scope="col">Название</th>
-      <th scope="col">Количество</th>
       <th scope="col">Цена</th>
-      <th scope="col">Общая цена</th>
+      <th scope="col">Количество</th>
+      <th scope="col">Итого</th>
     </tr>
   </thead>
   <tbody>
@@ -30,6 +30,7 @@
 </div>
 <div class="container">
   <a href="{% url 'cart:item_clear' value.product_id %}" class="btn btn-success">Удалить</a>
+  <a href="{% url 'cart:cart_add' value.product_id %}" class="btn btn-success">Добавить</a>
 </div>
 {% empty %}
 <div class="container">
