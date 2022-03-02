@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from cart.cart import Cart
 
 
-@login_required(login_url='/users/login')
+@login_required()
 def cart_add(request, id):
     """Добавляет предмет в корзину"""
     cart = Cart(request)
@@ -13,7 +13,7 @@ def cart_add(request, id):
     return redirect(request.META.get('HTTP_REFERER'))
 
 
-@login_required(login_url='/users/login')
+@login_required()
 def cart_clear(request):
     """Очищает корзину"""
     cart = Cart(request)
@@ -27,7 +27,7 @@ def cart_detail(request):
     return render(request, 'cart.html')
 
 
-@login_required(login_url="/users/login")
+@login_required()
 def item_clear(request, id):
     """Удаляет предмет из корзины"""
     cart = Cart(request)
