@@ -1,8 +1,8 @@
-new Vue({
-    el: '#summ',
-    data: {
-        summa: '1 + 1'
-    },
-
-}
-)
+$(document).ready(function(){
+var summ = 0;
+$(".app").each(function(){
+summ += parseInt($(this).html(), 10);
+document.getElementById('summ').innerHTML = summ;
+})
+console.log(summ)
+});

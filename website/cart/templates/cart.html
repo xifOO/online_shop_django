@@ -23,7 +23,7 @@
         <td>{{value.name}}</td>
         <td>{{value.price}}</td>
         <td>{{value.quantity}}</td>
-        <td>{{ value.price|multiply:value.quantity }}</td>
+        <td class="app">{{ value.price|multiply:value.quantity }}</td>
     </tr>
   </tbody>
 </table>
@@ -40,6 +40,8 @@
 {% if request.session.cart.items|length > 0 %}
 <div class="container">
   <a href="{% url 'cart:cart_clear' %}" class="btn btn-primary" style="margin-top: 20px;">Очистить корзину</a>
+  <h6 style="float: right; padding-right: 30px; margin-top: 20px;">Итого: &nbsp<p id="summ" style="float: right; padding-right: 30px;"></p></h6>
 </div>
+
 {% endif %}
 {% endblock %}

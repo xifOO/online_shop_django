@@ -38,4 +38,3 @@ def item_clear(request, id):
 
 
 
-
