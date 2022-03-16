@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from boots.models import Product
 from django.contrib.auth.decorators import login_required
 from cart.cart import Cart
+from payment import payment
 
 
 @login_required()
@@ -24,7 +25,8 @@ def cart_clear(request):
 @login_required()
 def cart_detail(request):
     """Корзина"""
-    return render(request, 'cart.html')
+    pay_url = payment.pay(amount=1)
+    return render(request, 'cart.html', {'pay_url': pay_url})
 
 
 @login_required()
@@ -34,6 +36,8 @@ def item_clear(request, id):
     product = Product.objects.get(id=id)
     cart.remove(product)
     return redirect("cart:cart_detail")
+
+
 
 
 

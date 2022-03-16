@@ -22,7 +22,7 @@
 
 #caret {
     color: #fff;
-    padding-top: 2px;
+    padding-top: 3px;
 }
 
 #medical {
@@ -220,4 +220,8 @@
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 
+}
+
+#cart {
+    margin-bottom: 3px;
 }

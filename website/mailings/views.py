@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from .forms import FeedbackForm, MailingForm
 from django.contrib import messages
-from website import temp
+from settings import temp
 
 
 def feedback(request):
