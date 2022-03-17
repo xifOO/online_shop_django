@@ -9,6 +9,7 @@ p2p = pyqiwip2p.QiwiP2P(auth_key=SECRET_QIWI_KEY)
 
 
 def pay(amount):
+    """Функция, отдающая ссылку на оплату через киви"""
     global new_bill, p2p
     new_bill = p2p.bill(bill_id=new_bill, amount=amount, lifetime=15)
     return new_bill.pay_url

@@ -11,7 +11,7 @@
             <h5 class="card-title">{{ order.name }}</h5>
             <p class="card-text">{{ order.price }} ₽</p>
             <a href="{% url 'boots:goalkeeper_form_detail' order.slug %}" class="btn btn-primary">Подробнее</a>
-            <a href="{% url 'cart:cart_add' order.id %}" class="btn btn-primary" method="get">В корзину</a>
+            <a href="{% url 'cart:cart_add' order.id %}" class="btn btn-primary" method="get" onclick="alert('Товар добавлен в корзину');">В корзину</a>
         </div>
     </div>
 </div>

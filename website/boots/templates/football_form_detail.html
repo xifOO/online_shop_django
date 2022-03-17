@@ -12,7 +12,7 @@
             <h4 class="product_name">{{ foot_form.name | linebreaks}}</h4>
             <p>{{ foot_form.description | linebreaks}}</p>
             <h3 class="product_price">{{ foot_form.price }} руб.</h3>
-            <a href="{% url 'cart:cart_add' foot_form.id %}" class="btn btn-primary" style="margin-top: 35px;">В корзину</a>
+            <a href="{% url 'cart:cart_add' foot_form.id %}" class="btn btn-primary" style="margin-top: 35px;" onclick="alert('Товар добавлен в корзину');">В корзину</a>
       </div>
     </div>
 </div>

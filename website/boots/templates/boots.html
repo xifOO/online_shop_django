@@ -9,7 +9,7 @@
             <h5 class="card-title">{{ order.name }}</h5>
             <p class="card-text">{{ order.price }} ₽</p>
             <a href="{% url 'boots:boots_detail' order.slug %}" class="btn btn-primary">Подробнее</a>
-            <a href="{% url 'cart:cart_add' order.id %}" class="btn btn-primary">В корзину</a>
+            <a href="{% url 'cart:cart_add' order.id %}" class="btn btn-primary" onclick="alert('Товар добавлен в корзину');">В корзину</a>
         </div>
     </div>
 </div>

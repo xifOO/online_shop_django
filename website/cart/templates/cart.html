@@ -29,7 +29,7 @@
 </table>
 </div>
 <div class="container">
-  <a href="{% url 'cart:item_clear' value.product_id %}" class="btn btn-success">Удалить</a>
+  <a href="{% url 'cart:item_clear' value.product_id %}" class="btn btn-success" onclick="alert('Вы удалили товар из корзины');">Удалить</a>
   <a href="{% url 'cart:cart_add' value.product_id %}" class="btn btn-success">Добавить</a>
 </div>
 {% empty %}
@@ -42,6 +42,6 @@
   <a href="{% url 'cart:cart_clear' %}" class="btn btn-primary" style="margin-top: 20px;">Очистить корзину</a>
   <a href="{{ pay_url }}" class="btn btn-success" style="float: right; margin-right: 30px; margin-top: 20px;">Итого: &nbsp<p id="summ" style="float: right; margin-right: 5px;"></p></a>
 </div>
-
 {% endif %}
 {% endblock %}
+

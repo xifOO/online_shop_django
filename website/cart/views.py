@@ -25,7 +25,8 @@ def cart_clear(request):
 @login_required()
 def cart_detail(request):
     """Корзина"""
-    pay_url = payment.pay(amount=1)
+    """Ссылка на оплату qiwi"""
+    pay_url = payment.pay(amount=100)
     return render(request, 'cart.html', {'pay_url': pay_url})
 
 
